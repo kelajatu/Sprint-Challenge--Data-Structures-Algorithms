@@ -19,13 +19,13 @@ class BinarySearchTree:
 
     def breadth_first_for_each(self, cb):
         queue = deque([self])
-    while queue:
-        curr = queue.popleft()
-        cb(curr.value)
-        if curr.left is not None:
-            queue.append(curr.left)
-        if curr.right is not None:
-            queue.append(curr.right)
+        while queue:
+            curr = queue.popleft()
+            cb(curr.value)
+            if curr.left is not None:
+                queue.append(curr.left)
+            if curr.right is not None:
+                queue.append(curr.right)
 
     def insert(self, value):
         new_tree = BinarySearchTree(value)
