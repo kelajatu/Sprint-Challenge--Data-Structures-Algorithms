@@ -1,8 +1,8 @@
 def heapsort(arr):
-    temp = Heap()
-    res = []
-    for i in arr:
-        temp.insert(i)
+        temp = Heap()
+        res = []
+        for i in arr:
+            temp.insert(i)
         while temp.get_size() > 0:
             res.append(temp.delete())
         return res[::-1]
